@@ -1,0 +1,2 @@
+https://mdn.com/ slice()
+https://javascript.info/
