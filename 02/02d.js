@@ -1,3 +1,4 @@
+let fs = require('fs');
 let inputs = process.argv.slice(3);
 let command = process.argv[2];
 
@@ -33,14 +34,46 @@ else if(command == "print2"){
         age: inputs[2]
     }
  
-    console.log("your object is:", obj);
-
     for(let key in obj){
-        console.log('key:', key);
-        console.log('value:', obj[key]);
+        console.log('salam', obj[key]);
     }
 
 }
+else if (command =="print3"){
+    let text='salam';
+    xxx(text);
+}
+else if (command =="print4"){
+    let text='salam';
+    console.log(yyy(text));
+}
 else {
     console.log("command not found.")
+}
+
+
+function xxx(salam){
+    let obj = {
+        name: inputs[0],
+        family: inputs[1],
+        age: inputs[2]
+    }
+
+    for(let key in obj){
+        console.log(salam, obj[key]);
+    }
+}
+
+function yyy(salam){
+    let obj = {
+        name: inputs[0],
+        family: inputs[1],
+        age: inputs[2]
+    }
+
+    let newObj = {};
+    for(let key in obj){
+        newObj[key] = salam + ' ' + obj[key];
+    }
+    return newObj;
 }

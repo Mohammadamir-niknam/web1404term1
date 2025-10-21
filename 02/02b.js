@@ -33,11 +33,8 @@ else if(command == "print2"){
         age: inputs[2]
     }
  
-    console.log("your object is:", obj);
-
     for(let key in obj){
-        console.log('key:', key);
-        console.log('value:', obj[key]);
+        console.log('salam', obj[key]);
     }
 
 }
